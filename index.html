@@ -4,317 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frost Studio - Digital Närvaro som Driver Resultat</title>
+    <meta name="description" content="Frost Studio bygger professionella hemsidor för småföretag. Vi hjälper dig att attrahera, övertyga och konvertera besökare till kunder. Boka ett kostnadsfritt strategisamtal idag.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.froststudio.se/">
+    <meta property="og:title" content="Frost Studio - Digital Närvaro som Driver Resultat">
+    <meta property="og:description" content="Vi bygger professionella hemsidor som hjälper småföretag att växa.">
+    <!-- <meta property="og:image" content="https://www.froststudio.se/social-image.jpg"> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.froststudio.se/">
+    <meta property="twitter:title" content="Frost Studio - Digital Närvaro som Driver Resultat">
+    <meta property="twitter:description" content="Vi bygger professionella hemsidor som hjälper småföretag att växa.">
+    <!-- <meta property="twitter:image" content="https://www.froststudio.se/social-image.jpg"> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-bg: #0d1117; 
-            --dark-secondary: #161b22;
-            --accent-glow: #58a6ff; 
-            --border-color: rgba(255, 255, 255, 0.1);
-            --light-text: #c9d1d9;
-            --white: #ffffff;
-            --heading-font: 'Montserrat', sans-serif;
-            --body-font: 'Inter', sans-serif;
-        }
-
-        @keyframes animated-gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body {
-            font-family: var(--body-font);
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Hero Sektion (Centrerad) */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 90vh;
-            padding: 40px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(300deg, #16213e, #0f3460, #1a1a2e, #58a6ff);
-            background-size: 300% 300%;
-            animation: animated-gradient 18s ease-in-out infinite;
-        }
-        
-        .hero-content h1 {
-            font-family: var(--heading-font);
-            font-size: 5.5em;
-            font-weight: 900;
-            margin: 0;
-            color: var(--white);
-            text-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-        
-        .hero-content .slogan {
-            font-size: 1.5em;
-            color: var(--white);
-            font-weight: 600;
-            margin-top: 10px;
-            letter-spacing: 1px;
-            opacity: 0.9;
-        }
-
-        /* Huvudsektioner - Vänsterställda som standard */
-        section {
-            padding: 80px 20px;
-            text-align: left; /* GRUNDÄNDRING: Standard är vänsterställd */
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        section h2 {
-            font-family: var(--heading-font);
-            font-size: 3em;
-            margin-bottom: 15px;
-            color: var(--white);
-        }
-
-        section .subtitle {
-            font-size: 1.2em;
-            color: #8b949e; 
-            margin-bottom: 50px;
-            max-width: 700px;
-            /* margin-left och right auto är borttaget för vänsterställning */
-        }
-        
-        /* --- VERKTYG FÖR TEXTJUSTERING --- */
-        .text-center {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .text-left {
-            text-align: left;
-        }
-        /* ------------------------------------ */
-        
-        /* Pelarna i intro-sektionen */
-        .intro-section {
-             text-align: center; /* Specifikt undantag för att centrera denna sektions rubriker */
-        }
-        .pillars-grid {
-            display: flex;
-            justify-content: space-around;
-            gap: 30px;
-            margin-top: 50px;
-            flex-wrap: wrap;
-        }
-        .pillar-card {
-            flex-basis: 30%;
-            min-width: 280px;
-            padding: 30px;
-            background: var(--dark-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            text-align: left; /* Säkerställer vänsterställning inuti korten */
-        }
-        .pillar-card:hover {
-             transform: translateY(-5px);
-             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        .pillar-card .icon {
-            font-size: 3em;
-            color: var(--accent-glow);
-            margin-bottom: 20px;
-        }
-        .pillar-card h3 {
-             font-family: var(--heading-font);
-             color: var(--white);
-             font-size: 1.4em;
-        }
-
-        /* Problemsektionen */
-        .problem-section {
-            background-color: var(--dark-secondary);
-        }
-        .problem-list {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        .problem-item {
-            flex-basis: 30%;
-            min-width: 250px;
-            text-align: left;
-        }
-        .problem-item h3 {
-            font-family: var(--heading-font);
-            font-size: 1.3em;
-            color: var(--accent-glow);
-        }
-
-        /* Process-sektionen */
-        .process-section .timeline {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            position: relative;
-            margin-top: 50px;
-        }
-        .timeline-item {
-            flex-basis: 22%;
-            padding: 25px;
-            position: relative;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            text-align: left;
-        }
-        .timeline-item h3 {
-            font-family: var(--heading-font);
-            color: var(--white);
-            margin-top: 0;
-        }
-
-        /* Paket-sektionen */
-        .packages-section {
-            background-color: var(--dark-secondary);
-        }
-        .packages-section h2, .packages-section .subtitle {
-             text-align: center; /* Specifikt undantag för att centrera dessa rubriker */
-        }
-        .packages-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .package-card {
-            background: var(--dark-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 30px;
-            flex-basis: 310px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: left;
-        }
-        .package-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
-        }
-        .package-card.highlight {
-             border: 2px solid var(--accent-glow);
-             box-shadow: 0 0 40px rgba(88, 166, 255, 0.3);
-        }
-        .package-card h3 {
-            font-family: var(--heading-font);
-            font-size: 1.6em;
-            color: var(--accent-glow);
-        }
-        .package-card .price {
-            font-size: 2.2em;
-            font-weight: 700;
-            margin: 20px 0;
-            color: var(--white);
-        }
-        .package-card .price .ord-price {
-            text-decoration: line-through;
-            color: #8b949e;
-            font-size: 0.6em;
-        }
-        .package-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .package-card ul li::before {
-            content: '✓';
-            color: var(--accent-glow);
-            margin-right: 10px;
-        }
-
-        /* Knappar och länkar */
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-glow);
-            color: var(--white);
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 50px;
-            font-family: var(--heading-font);
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(88, 166, 255, 0.3);
-        }
-        .cta-button:hover {
-            background: var(--white);
-            color: var(--accent-glow);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
-        }
-        
-        /* Checklistan */
-        .checklist-section ul {
-            list-style: none;
-            padding: 0;
-            max-width: 500px;
-        }
-        .checklist-section ul li {
-            font-size: 1.1em;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .checklist-section ul li::before {
-            content: '✓';
-            color: var(--accent-glow);
-            margin-right: 15px;
-            font-weight: 700;
-        }
-
-        /* Footer (Centrerad) */
-        footer {
-            background-color: var(--dark-secondary);
-            color: #8b949e;
-            text-align: center;
-            padding: 60px 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        footer h2 {
-            color: var(--white);
-        }
-
-        footer a {
-            color: var(--accent-glow);
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 992px) {
-            .packages-grid, .pillars-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3em; }
-            section h2 { font-size: 2.2em; }
-            .problem-item, .timeline-item { flex-basis: 100%; margin-bottom: 30px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Frost Studio",
+      "telephone": "076-562 26 92",
+      "email": "vilmer.frost@froststudio.se",
+      "url": "https://www.froststudio.se",
+      "description": "Frost Studio specialiserar sig på att skapa resultatinriktade hemsidor för småföretag.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SE"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -326,66 +51,74 @@
     </header>
 
     <main>
-        <section class="intro-section container">
-            <h2 class="text-center">Från Idé till Tillväxtmotor</h2>
-            <p class="subtitle text-center">En hemsida är inte bara en adress. Det är en motor för ditt företag. Vår process är byggd för att leverera just det, genom tre tydliga steg.</p>
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="icon">🎯</div>
-                    <h3>1. ATTRAHERA</h3>
-                    <p>Vi bygger en professionell och sökmotorvänlig grund som gör att rätt kunder hittar till dig.</p>
-                </div>
-                <div class="pillar-card">
-                     <div class="icon">🎨</div>
-                    <h3>2. ÖVERTYGA</h3>
-                    <p>Med en skarp design och ett tydligt budskap omvandlar vi besökare till intressenter.</p>
-                </div>
-                <div class="pillar-card">
-                     <div class="icon">📈</div>
-                    <h3>3. KONVERTERA</h3>
-                    <p>Genom tydliga "call-to-actions" gör vi det enkelt för kunden att ta nästa steg och kontakta dig.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="problem-section container">
-            <h2>Känner du igen dig?</h2>
-            <p class="subtitle">Utmaningen för många företagare.</p>
-            <div class="problem-list">
-                <div class="problem-item">
-                    <h3>Omodern Design</h3>
-                    <p>"Min hemsida ser omodern ut och speglar inte mitt företags kvalitet."</p>
-                </div>
-                <div class="problem-item">
-                    <h3>Uteblivna Resultat</h3>
-                    <p>"Jag får inga kunder via webben och vet inte varför."</p>
-                </div>
-                <div class="problem-item">
-                    <h3>Teknik-stress</h3>
-                    <p>"Tekniken känns överväldigande och jag har inte tid att hantera den."</p>
+        <section class="intro-section">
+            <div class="container">
+                <h2 class="text-center">Från Idé till Tillväxtmotor</h2>
+                <p class="subtitle text-center">En hemsida är inte bara en adress. Det är en motor för ditt företag. Vår process är byggd för att leverera just det, genom tre tydliga steg.</p>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="icon" aria-hidden="true">🎯</div>
+                        <h3>ATTRAHERA</h3>
+                        <p>Vi bygger en professionell och sökmotorvänlig grund som gör att rätt kunder hittar till dig.</p>
+                    </div>
+                    <div class="pillar-card">
+                         <div class="icon" aria-hidden="true">🎨</div>
+                        <h3>ÖVERTYGA</h3>
+                        <p>Med en skarp design och ett tydligt budskap omvandlar vi besökare till intressenter.</p>
+                    </div>
+                    <div class="pillar-card">
+                         <div class="icon" aria-hidden="true">📈</div>
+                        <h3>KONVERTERA</h3>
+                        <p>Genom tydliga "call-to-actions" gör vi det enkelt för kunden att ta nästa steg och kontakta dig.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="process-section container">
-            <h2>Vår Process</h2>
-            <p class="subtitle">Från Första Samtal till Färdig Hemsida</p>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>1. Strategisamtal</h3>
-                    <p>Vi lär känna din verksamhet, dina mål och dina kunder. Kostnadsfritt och förutsättningslöst.</p>
+        <section class="problem-section bg-dark-secondary">
+            <div class="container problem-content-wrapper">
+                <div class="problem-intro">
+                    <h2>Känner du igen dig?</h2>
+                    <p class="subtitle">Många företagare står inför samma digitala utmaningar. Vi har lösningen.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3>2. Visuell Prototyp</h3>
-                    <p>Baserat på vårt samtal skapar vi en visuell prototyp så att du kan se och godkänna designriktningen.</p>
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <h3>Omodern Design</h3>
+                        <p>"Min hemsida ser omodern ut och speglar inte mitt företags kvalitet."</p>
+                    </div>
+                    <div class="problem-item">
+                        <h3>Uteblivna Resultat</h3>
+                        <p>"Jag får inga kunder via webben och vet inte varför."</p>
+                    </div>
+                    <div class="problem-item">
+                        <h3>Teknik-stress</h3>
+                        <p>"Tekniken känns överväldigande och jag har inte tid att hantera den."</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h3>3. Utveckling & Feedback</h3>
-                    <p>Vi bygger hemsidan. Du får två inbyggda feedback-rundor för att säkerställa att allt blir perfekt.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>4. Lansering & Överlämning</h3>
-                    <p>Vi sjösätter din nya hemsida och ser till att du är redo att ta emot dina nya kunder.</p>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="container">
+                <h2>Vår Process</h2>
+                <p class="subtitle">Från Första Samtal till Färdig Hemsida</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3><span class="step-number">1</span>Strategisamtal</h3>
+                        <p>Vi lär känna din verksamhet, dina mål och dina kunder. Kostnadsfritt och förutsättningslöst.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3><span class="step-number">2</span>Visuell Prototyp</h3>
+                        <p>Baserat på vårt samtal skapar vi en visuell prototyp så att du kan se och godkänna designriktningen.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3><span class="step-number">3</span>Utveckling & Feedback</h3>
+                        <p>Vi bygger hemsidan. Du får två inbyggda feedback-rundor för att säkerställa att allt blir perfekt.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3><span class="step-number">4</span>Lansering & Överlämning</h3>
+                        <p>Vi sjösätter din nya hemsida och ser till att du är redo att ta emot dina nya kunder.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -400,9 +133,9 @@
                         <p class="price">1500 kr</p>
                         <p>En enkel, effektiv och snygg "one-pager" som täcker det viktigaste.</p>
                         <ul>
-                            <li>✓ Om oss</li>
-                            <li>✓ Kontaktinformation</li>
-                            <li>✓ Övrig information</li>
+                            <li>Om oss</li>
+                            <li>Kontaktinformation</li>
+                            <li>Övrig information</li>
                         </ul>
                     </div>
                     <div class="package-card highlight">
@@ -410,10 +143,10 @@
                         <p class="price">2500 kr <span class="ord-price">3500 kr</span></p>
                         <p>Vårt mest prisvärda paket för småföretag som vill ha en komplett närvaro.</p>
                         <ul>
-                           <li>✓ Landing Page (Startsida)</li>
-                           <li>✓ Om oss</li>
-                           <li>✓ Kontakt + Formulär</li>
-                           <li>✓ Valfri extra sektion</li>
+                           <li>Landing Page (Startsida)</li>
+                           <li>Om oss</li>
+                           <li>Kontakt + Formulär</li>
+                           <li>Valfri extra sektion</li>
                         </ul>
                     </div>
                     <div class="package-card">
@@ -421,28 +154,57 @@
                          <p class="price">3500 kr <span class="ord-price">4500 kr</span></p>
                         <p>Helt skräddarsydd design med upp till 5 sidor och fokus på SEO.</p>
                          <ul>
-                           <li>✓ Helt skräddarsydd design</li>
-                           <li>✓ Max 5 sidor</li>
-                           <li>✓ SEO-fokus</li>
-                           <li>✓ Valfria tillägg</li>
+                           <li>Helt skräddarsydd design</li>
+                           <li>Max 5 sidor</li>
+                           <li>SEO-fokus</li>
+                           <li>Valfria tillägg</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="text-center">Vad Våra Kunder Säger</h2>
+                <p class="subtitle text-center">Resultat som talar för sig själva.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Samarbetet med Frost Studio var över förväntan. De förstod vår vision direkt och levererade en hemsida som både ser fantastisk ut och faktiskt genererar nya kunder."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Oskar Svensson</span>
+                            <span class="author-title">VD, Oskars Bygg AB</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Från en omodern och osynlig hemsida till en modern och professionell plattform. Vi har redan sett en märkbar ökning i förfrågningar. Rekommenderas starkt!"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Stefan Frost</span>
+                            <span class="author-title">Grundare Frost Data AB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-         <section class="container">
-            <h2 class="text-center">För långsiktig Trygghet</h2>
-            <p class="subtitle text-center">Fokusera på ditt företag – vi sköter tekniken</p>
-            <p class="text-center" style="max-width: 700px; margin-left: auto; margin-right: auto;">Efter lansering erbjuder vi ett Service & Supportavtal. För en fast månadskostnad ser vi till att din hemsida alltid är snabb, säker och uppdaterad. Det är din digitala vaktmästare och försäkring. I avtalet ingår tekniska uppdateringar, säkerhetsövervakning och en timmes fria ändringar per månad.</p>
-             <p class="text-center"><a href="mailto:vilmer.frost@gmail.com">Fråga oss gärna för mer information och priser.</a></p>
+         <section class="support-section">
+            <div class="container">
+                <div class="support-callout">
+                    <h2>För långsiktig Trygghet</h2>
+                    <p class="subtitle">Fokusera på ditt företag – vi sköter tekniken.</p>
+                    <p>Efter lansering erbjuder vi ett Service & Supportavtal. För en fast månadskostnad ser vi till att din hemsida alltid är snabb, säker och uppdaterad. Det är din digitala vaktmästare och försäkring, där tekniska uppdateringar, säkerhetsövervakning och en timmes fria ändringar per månad ingår.</p>
+                    <a href="mailto:vilmer.frost@froststudio.se" class="cta-button secondary">Läs mer om Serviceavtal</a>
+                </div>
+            </div>
         </section>
 
-        <section class="checklist-section" style="background-color: var(--dark-secondary);">
-            <div class="container">
-                 <h2>Vad vi behöver från dig</h2>
-                 <p class="subtitle">En enkel checklista för en smidig process.</p>
-                 <ul>
+        <section class="checklist-section bg-dark-secondary">
+            <div class="container checklist-wrapper">
+                <div class="checklist-intro">
+                    <h2>Vad vi behöver från dig</h2>
+                    <p class="subtitle">En enkel checklista för en smidig process.</p>
+                </div>
+                <ul class="checklist">
                     <li>Logotyp (högupplöst)</li>
                     <li>Texter för alla sidor</li>
                     <li>Bilder ni vill använda</li>
@@ -457,16 +219,26 @@
             <h2>Redo att ta nästa steg?</h2>
             <p>Det första steget mot en bättre digital närvaro är bara ett samtal bort. Boka ditt kostnadsfria, 30-minuters strategisamtal med oss idag.</p>
             <a href="https://calendly.com/vilmer-froststudio/30min" class="cta-button">Boka Strategisamtal</a>
-            <p style="margin-top: 40px; font-size: 0.9em;">
+            <address class="contact-info">
                 <strong>Frost Studio</strong><br>
                 Vilmer Frost<br>
                 <a href="mailto:vilmer.frost@froststudio.se">vilmer.frost@froststudio.se</a> | <a href="tel:0765622692">076-562 26 92</a><br>
                 www.froststudio.se
+            </address>
+             <p class="disclaimer">
+                Alla priser anges exklusive moms. Kostnad för webbhotell och domännamn (ca 1000-1500 kr/år) tillkommer.
             </p>
-             <p style="font-size: 0.8em; color: #8b949e; margin-top: 20px;">Alla priser anges exklusive moms. Kostnad för webbhotell och domännamn (ca 1000-1500 kr/år) tillkommer.</p>
         </div>
     </footer>
 
-    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Vi använder cookies för att förbättra din upplevelse. Genom att fortsätta använda sidan godkänner du detta. <a href="/integritetspolicy.html">Läs mer</a></p>
+        <button id="cookie-accept-btn" class="cta-button">Jag förstår</button>
+    </div>
+
+    <a href="#" class="scroll-to-top" title="Skrolla till toppen" aria-label="Skrolla till toppen">↑</a>
+
+    <script src="script.js"></script>
 </body>
 </html>
